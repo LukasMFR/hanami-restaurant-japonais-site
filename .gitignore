@@ -1,0 +1,47 @@
+# ---- macOS ----
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# ---- Windows ----
+Thumbs.db
+Desktop.ini
+
+# ---- Éditeurs / IDE ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# ---- Node (outillage ponctuel : captures, conversions, serveurs locaux) ----
+node_modules/
+package.json
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+npm-debug.log*
+yarn-error.log*
+
+# ---- Artefacts de test / build / temporaires ----
+.shots/
+.imgcheck/
+dist/
+build/
+*.log
+*.tmp
+
+# ---- Environnement ----
+.env
+.env.local
+.cache/
+
+# ---- Outillage agent / skills (local, hors site) ----
+.agents/
+.claude/
+skills-lock.json

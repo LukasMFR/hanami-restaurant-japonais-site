@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hanami · Restaurant japonais à Paris</title>
+  <meta name="description" content="Hanami, restaurant japonais de quartier dans le 11e à Paris. Ramen mijotés, sushi du jour, donburi et izakaya dans une ambiance zen et chaleureuse. Réservez votre table." />
+  <meta name="theme-color" content="#F5EFE5" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="restaurant" />
+  <meta property="og:title" content="Hanami · Restaurant japonais à Paris" />
+  <meta property="og:description" content="Cuisine japonaise de quartier : ramen, sushi, donburi et izakaya. Une maison zen et chaleureuse, ouverte depuis 2016." />
+  <meta property="og:image" content="assets/images/hero.webp" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- Fonts : Shippori Mincho (mincho serif) + Zen Kaku Gothic New (gothic sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Phosphor Icons (light weight) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/light/style.css" />
+
+  <link rel="preload" as="image" href="assets/images/hero.webp" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav" data-state="top">
+    <div class="nav__inner">
+      <a class="brand" href="#accueil" aria-label="Hanami, accueil">
+        <span class="brand__mark" aria-hidden="true">花</span>
+        <span class="brand__name">Hanami</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Navigation principale">
+        <a href="#restaurant">Le restaurant</a>
+        <a href="#menu">La carte</a>
+        <a href="#specialites">Spécialités</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#infos">Infos &amp; accès</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a class="btn btn--primary btn--sm" href="#reservation">Réserver</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ MOBILE MENU ============ -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-menu__links" aria-label="Navigation mobile">
+      <a href="#restaurant" style="--d:1">Le restaurant</a>
+      <a href="#menu" style="--d:2">La carte</a>
+      <a href="#specialites" style="--d:3">Spécialités</a>
+      <a href="#galerie" style="--d:4">Galerie</a>
+      <a href="#infos" style="--d:5">Infos &amp; accès</a>
+      <a href="#reservation" style="--d:6">Réserver une table</a>
+    </nav>
+    <div class="mobile-menu__foot" style="--d:7">
+      <p>14 rue de la Roquette, 75011 Paris</p>
+      <p><a href="tel:+33148073962">01 48 07 39 62</a></p>
+    </div>
+  </div>
+
+  <main id="contenu">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="accueil">
+      <div class="hero__media">
+        <img src="assets/images/hero.webp" alt="Bol de ramen fumant servi chez Hanami" fetchpriority="high" />
+        <div class="hero__scrim"></div>
+      </div>
+      <div class="hero__content">
+        <p class="eyebrow eyebrow--light">花見 &nbsp;·&nbsp; Restaurant japonais, Paris 11e</p>
+        <h1 class="hero__title">Le Japon,<br />au coin de la rue.</h1>
+        <p class="hero__lead">Ramen mijotés, sushi du jour et petites assiettes à partager, dans une maison zen et chaleureuse.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#reservation">
+            Réserver une table
+            <span class="btn__icon" aria-hidden="true"><i class="ph-light ph-arrow-up-right"></i></span>
+          </a>
+          <a class="btn btn--ghost" href="#menu">Découvrir la carte</a>
+        </div>
+      </div>
+      <div class="hero__meta">
+        <span><i class="ph-light ph-map-pin" aria-hidden="true"></i> Bastille, Paris</span>
+        <span class="hero__meta-sep" aria-hidden="true"></span>
+        <span>Ouvert depuis 2016</span>
+      </div>
+    </section>
+
+    <!-- ============ PRÉSENTATION ============ -->
+    <section class="about section" id="restaurant">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__media reveal">
+            <figure class="about__img about__img--tall">
+              <img src="assets/images/about-chef.webp" alt="Le chef de Hanami dressant un plat au comptoir" loading="lazy" />
+            </figure>
+            <figure class="about__img about__img--wide">
+              <img src="assets/images/about-room.webp" alt="Salle du restaurant Hanami, bois clair et lumière douce" loading="lazy" />
+            </figure>
+          </div>
+
+          <div class="about__text">
+            <h2 class="section__title reveal">Une maison japonaise<br />au coin de la rue.</h2>
+            <p class="reveal" style="--d:1">Hanami est né d'une idée simple : retrouver l'esprit des petits restaurants de Tokyo, là où l'on pousse la porte sans réserver, où le bouillon mijote depuis l'aube et où l'on connaît votre prénom.</p>
+            <p class="reveal" style="--d:2">Notre chef, Haruki Mori, travaille des produits frais et de saison. Les ramen reposent sur des bouillons cuits longuement, le poisson est tranché à la commande, et nos gyoza sont pliés chaque matin à la main. Rien de spectaculaire, juste du soin.</p>
+            <ul class="about__facts reveal" style="--d:3">
+              <li><strong>28</strong><span>couverts au comptoir et en salle</span></li>
+              <li><strong>2016</strong><span>année d'ouverture, rue de la Roquette</span></li>
+              <li><strong>12h</strong><span>de cuisson pour le bouillon tonkotsu</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MENU / CARTE ============ -->
+    <section class="menu section section--alt" id="menu">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title reveal">La carte</h2>
+          <p class="section__intro reveal" style="--d:1">Une cuisine japonaise généraliste, sans esbroufe : des classiques bien faits, à partager ou pour soi. La carte change un peu au fil des saisons et des arrivages.</p>
+        </header>
+
+        <div class="lunch reveal" style="--d:2">
+          <div class="lunch__tag">Menu du midi</div>
+          <div class="lunch__body">
+            <p class="lunch__price">16,90 €</p>
+            <p class="lunch__desc">Une entrée, un plat au choix et un thé vert. Servi du mardi au vendredi, de 12h à 14h30.</p>
+          </div>
+        </div>
+
+        <div class="menu__grid">
+          <div class="menu-cat reveal">
+            <h3 class="menu-cat__title">Petites assiettes</h3>
+            <ul class="menu-list">
+              <li class="menu-item"><span class="menu-item__name">Edamame, fleur de sel</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">5,50</span></li>
+              <li class="menu-item"><span class="menu-item__name">Gyoza maison, porc &amp; gingembre <em>(5 pièces)</em></span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">8,50</span></li>
+              <li class="menu-item"><span class="menu-item__name">Karaage, poulet frit japonais</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">9,00</span></li>
+              <li class="menu-item"><span class="menu-item__name">Tataki de thon, ponzu yuzu</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">12,00</span></li>
+              <li class="menu-item"><span class="menu-item__name">Tempura de légumes</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">8,00</span></li>
+              <li class="menu-item"><span class="menu-item__name">Salade wakame, sésame</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">6,50</span></li>
+            </ul>
+          </div>
+
+          <div class="menu-cat reveal" style="--d:1">
+            <h3 class="menu-cat__title">Ramen &amp; nouilles</h3>
+            <ul class="menu-list">
+              <li class="menu-item"><span class="menu-item__name">Ramen shoyu, œuf mollet, chashu</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">15,50</span></li>
+              <li class="menu-item"><span class="menu-item__name">Ramen tonkotsu, bouillon de porc</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">16,50</span></li>
+              <li class="menu-item"><span class="menu-item__name">Ramen miso végétarien</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14,50</span></li>
+              <li class="menu-item"><span class="menu-item__name">Yakisoba au bœuf</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14,00</span></li>
+              <li class="menu-item"><span class="menu-item__name">Udon au curry japonais</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">13,50</span></li>
+            </ul>
+          </div>
+
+          <div class="menu-cat reveal">
+            <h3 class="menu-cat__title">Sushi &amp; sashimi</h3>
+            <ul class="menu-list">
+              <li class="menu-item"><span class="menu-item__name">Assortiment sashimi <em>(12 pièces)</em></span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">19,00</span></li>
+              <li class="menu-item"><span class="menu-item__name">Chirashi saumon</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">17,50</span></li>
+              <li class="menu-item"><span class="menu-item__name">Plateau Hanami <em>(18 pièces)</em></span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">26,00</span></li>
+              <li class="menu-item"><span class="menu-item__name">Maki California <em>(6 pièces)</em></span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">7,00</span></li>
+              <li class="menu-item"><span class="menu-item__name">Nigiri saumon <em>(2 pièces)</em></span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">6,00</span></li>
+            </ul>
+          </div>
+
+          <div class="menu-cat reveal" style="--d:1">
+            <h3 class="menu-cat__title">Donburi &amp; plats</h3>
+            <ul class="menu-list">
+              <li class="menu-item"><span class="menu-item__name">Katsudon, porc pané et œuf</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">15,00</span></li>
+              <li class="menu-item"><span class="menu-item__name">Gyudon, bœuf mijoté &amp; oignon</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14,50</span></li>
+              <li class="menu-item"><span class="menu-item__name">Saumon teriyaki, riz vapeur</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">16,00</span></li>
+              <li class="menu-item"><span class="menu-item__name">Chirashi végétarien</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14,00</span></li>
+            </ul>
+          </div>
+
+          <div class="menu-cat reveal">
+            <h3 class="menu-cat__title">Desserts</h3>
+            <ul class="menu-list">
+              <li class="menu-item"><span class="menu-item__name">Mochi glacé, matcha ou sésame noir</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">6,50</span></li>
+              <li class="menu-item"><span class="menu-item__name">Crème brûlée au thé matcha</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">7,00</span></li>
+              <li class="menu-item"><span class="menu-item__name">Dorayaki, pâte de haricot rouge</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">6,00</span></li>
+              <li class="menu-item"><span class="menu-item__name">Glace au sésame noir</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">5,50</span></li>
+            </ul>
+          </div>
+
+          <div class="menu-cat reveal" style="--d:1">
+            <h3 class="menu-cat__title">À boire</h3>
+            <ul class="menu-list">
+              <li class="menu-item"><span class="menu-item__name">Saké junmai, le verre</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">7,00</span></li>
+              <li class="menu-item"><span class="menu-item__name">Bière Asahi pression</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">5,50</span></li>
+              <li class="menu-item"><span class="menu-item__name">Thé sencha en théière</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">4,50</span></li>
+              <li class="menu-item"><span class="menu-item__name">Yuzu pétillant maison</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">4,80</span></li>
+            </ul>
+          </div>
+        </div>
+        <p class="menu__note reveal">Les prix sont indiqués en euros, taxes comprises. Merci de nous signaler toute allergie : nous adaptons les plats avec plaisir.</p>
+      </div>
+    </section>
+
+    <!-- ============ SPÉCIALITÉS ============ -->
+    <section class="spec section" id="specialites">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow reveal">Nos spécialités</p>
+          <h2 class="section__title reveal" style="--d:1">Les plats qui font<br />revenir le quartier.</h2>
+        </header>
+
+        <div class="spec__grid">
+          <article class="spec-card reveal">
+            <div class="spec-card__media">
+              <img src="assets/images/spec-ramen.webp" alt="Ramen tonkotsu au bouillon de porc" loading="lazy" />
+            </div>
+            <div class="spec-card__body">
+              <div class="spec-card__head">
+                <h3 class="spec-card__title">Ramen Tonkotsu</h3>
+                <span class="price-pill">16,50 €</span>
+              </div>
+              <p>Notre signature. Un bouillon de porc mijoté douze heures, des nouilles fraîches, du chashu fondant et un œuf mariné au shoyu.</p>
+            </div>
+          </article>
+
+          <article class="spec-card reveal" style="--d:1">
+            <div class="spec-card__media">
+              <img src="assets/images/spec-sushi.webp" alt="Plateau de sushi et sashimi Hanami" loading="lazy" />
+            </div>
+            <div class="spec-card__body">
+              <div class="spec-card__head">
+                <h3 class="spec-card__title">Plateau Hanami</h3>
+                <span class="price-pill">26,00 €</span>
+              </div>
+              <p>Dix-huit pièces composées selon l'arrivage du jour : nigiri, sashimi et makis, taillés à la commande au comptoir.</p>
+            </div>
+          </article>
+
+          <article class="spec-card reveal" style="--d:2">
+            <div class="spec-card__media">
+              <img src="assets/images/spec-donburi.webp" alt="Katsudon, bol de riz au porc pané et œuf" loading="lazy" />
+            </div>
+            <div class="spec-card__body">
+              <div class="spec-card__head">
+                <h3 class="spec-card__title">Katsudon</h3>
+                <span class="price-pill">15,00 €</span>
+              </div>
+              <p>Le réconfort japonais par excellence. Porc pané croustillant, oignon doux et œuf coulant, le tout posé sur un riz bien chaud.</p>
+            </div>
+          </article>
+
+          <article class="spec-card reveal" style="--d:3">
+            <div class="spec-card__media">
+              <img src="assets/images/spec-gyoza.webp" alt="Gyoza maison dorés au comptoir" loading="lazy" />
+            </div>
+            <div class="spec-card__body">
+              <div class="spec-card__head">
+                <h3 class="spec-card__title">Gyoza maison</h3>
+                <span class="price-pill">8,50 €</span>
+              </div>
+              <p>Pliés à la main chaque matin, garnis de porc et de gingembre, saisis puis vapeur. À tremper dans notre sauce ponzu maison.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DIVIDER / CITATION ============ -->
+    <section class="divider" aria-label="L'esprit Hanami">
+      <div class="divider__bg" aria-hidden="true"></div>
+      <div class="divider__scrim" aria-hidden="true"></div>
+      <blockquote class="divider__quote reveal">
+        <p>« Hanami » désigne l'art de contempler les cerisiers en fleur.</p>
+        <cite>Chez nous, c'est l'art de prendre le temps, à table.</cite>
+      </blockquote>
+    </section>
+
+    <!-- ============ GALERIE ============ -->
+    <section class="gallery section section--alt" id="galerie">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title reveal">À table chez Hanami</h2>
+          <p class="section__intro reveal" style="--d:1">Quelques images de la salle, du comptoir et des assiettes qui passent chaque jour entre nos mains.</p>
+        </header>
+
+        <div class="gallery__grid">
+          <button class="gallery__item gallery__item--lg reveal" data-full="assets/images/gal-2.webp" aria-label="Agrandir : ramen épicé maison">
+            <img src="assets/images/gal-2.webp" alt="Ramen épicé maison vu de dessus" loading="lazy" />
+          </button>
+          <button class="gallery__item reveal" style="--d:1" data-full="assets/images/gal-1.webp" aria-label="Agrandir : assortiment de sushi">
+            <img src="assets/images/gal-1.webp" alt="Assortiment de sushi disposé sur l'ardoise" loading="lazy" />
+          </button>
+          <button class="gallery__item reveal" style="--d:2" data-full="assets/images/gal-3.webp" aria-label="Agrandir : ambiance de la salle">
+            <img src="assets/images/gal-3.webp" alt="Table dressée dans l'ambiance chaleureuse de la salle" loading="lazy" />
+          </button>
+          <button class="gallery__item reveal" style="--d:1" data-full="assets/images/gal-4.webp" aria-label="Agrandir : maki au saumon">
+            <img src="assets/images/gal-4.webp" alt="Gros plan sur un maki au saumon" loading="lazy" />
+          </button>
+          <button class="gallery__item gallery__item--wide reveal" style="--d:2" data-full="assets/images/gal-5.webp" aria-label="Agrandir : donburi du jour">
+            <img src="assets/images/gal-5.webp" alt="Donburi coloré du jour" loading="lazy" />
+          </button>
+          <button class="gallery__item reveal" style="--d:3" data-full="assets/images/gal-6.webp" aria-label="Agrandir : ramen et gyoza">
+            <img src="assets/images/gal-6.webp" alt="Bol de ramen accompagné de gyoza" loading="lazy" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INFOS : HORAIRES + ADRESSE ============ -->
+    <section class="infos section" id="infos">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title reveal">Horaires &amp; accès</h2>
+          <p class="section__intro reveal" style="--d:1">Au cœur du quartier de la Roquette, à deux pas de la Bastille. On vous accueille midi et soir, du mardi au dimanche.</p>
+        </header>
+
+        <div class="infos__grid">
+          <div class="infos__col reveal">
+            <h3 class="infos__h"><i class="ph-light ph-clock" aria-hidden="true"></i> Horaires</h3>
+            <ul class="hours">
+              <li><span>Lundi</span><span class="hours__closed">Fermé</span></li>
+              <li><span>Mardi</span><span>12h00 - 14h30&nbsp; ·&nbsp; 19h00 - 22h30</span></li>
+              <li><span>Mercredi</span><span>12h00 - 14h30&nbsp; ·&nbsp; 19h00 - 22h30</span></li>
+              <li><span>Jeudi</span><span>12h00 - 14h30&nbsp; ·&nbsp; 19h00 - 22h30</span></li>
+              <li><span>Vendredi</span><span>12h00 - 14h30&nbsp; ·&nbsp; 19h00 - 23h00</span></li>
+              <li><span>Samedi</span><span>19h00 - 23h00</span></li>
+              <li><span>Dimanche</span><span>12h00 - 15h00</span></li>
+            </ul>
+          </div>
+
+          <div class="infos__col reveal" style="--d:1">
+            <h3 class="infos__h"><i class="ph-light ph-map-pin" aria-hidden="true"></i> Nous trouver</h3>
+            <address class="address">
+              <p class="address__line">14 rue de la Roquette<br />75011 Paris</p>
+              <p class="address__meta"><i class="ph-light ph-train-simple" aria-hidden="true"></i> Métro Bastille (lignes 1, 5, 8) à 4 min à pied</p>
+              <p class="address__meta"><i class="ph-light ph-phone" aria-hidden="true"></i> <a href="tel:+33148073962">01 48 07 39 62</a></p>
+              <p class="address__meta"><i class="ph-light ph-envelope-simple" aria-hidden="true"></i> <a href="mailto:bonjour@hanami-paris.fr">bonjour@hanami-paris.fr</a></p>
+            </address>
+            <div class="map">
+              <iframe
+                title="Carte de localisation de Hanami"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=2.3650%2C48.8520%2C2.3780%2C48.8580&amp;layer=mapnik&amp;marker=48.8550%2C2.3715"
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RÉSERVATION / CONTACT ============ -->
+    <section class="reserve section section--alt" id="reservation">
+      <div class="container">
+        <div class="reserve__grid">
+          <div class="reserve__aside reveal">
+            <p class="eyebrow">Réservation</p>
+            <h2 class="section__title">Réserver<br />une table.</h2>
+            <p class="reserve__text">Pour les tables de plus de six personnes ou un événement, appelez-nous directement. On vous rappelle volontiers pour confirmer.</p>
+            <ul class="reserve__contact">
+              <li><i class="ph-light ph-phone" aria-hidden="true"></i> <a href="tel:+33148073962">01 48 07 39 62</a></li>
+              <li><i class="ph-light ph-envelope-simple" aria-hidden="true"></i> <a href="mailto:bonjour@hanami-paris.fr">bonjour@hanami-paris.fr</a></li>
+              <li><i class="ph-light ph-map-pin" aria-hidden="true"></i> 14 rue de la Roquette, 75011 Paris</li>
+            </ul>
+          </div>
+
+          <form class="reserve__form reveal" id="reserveForm" novalidate>
+            <div class="field">
+              <label for="r-name">Nom</label>
+              <input type="text" id="r-name" name="name" autocomplete="name" required placeholder="Votre nom" />
+              <span class="field__error" data-for="r-name"></span>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="r-phone">Téléphone</label>
+                <input type="tel" id="r-phone" name="phone" autocomplete="tel" required placeholder="06 12 34 56 78" />
+                <span class="field__error" data-for="r-phone"></span>
+              </div>
+              <div class="field">
+                <label for="r-email">Email</label>
+                <input type="email" id="r-email" name="email" autocomplete="email" required placeholder="vous@email.fr" />
+                <span class="field__error" data-for="r-email"></span>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="r-date">Date</label>
+                <input type="date" id="r-date" name="date" required />
+                <span class="field__error" data-for="r-date"></span>
+              </div>
+              <div class="field">
+                <label for="r-time">Heure</label>
+                <select id="r-time" name="time" required>
+                  <option value="" disabled selected>Choisir</option>
+                  <option>12h00</option><option>12h30</option><option>13h00</option><option>13h30</option>
+                  <option>19h00</option><option>19h30</option><option>20h00</option><option>20h30</option><option>21h00</option><option>21h30</option>
+                </select>
+                <span class="field__error" data-for="r-time"></span>
+              </div>
+              <div class="field field--narrow">
+                <label for="r-guests">Couverts</label>
+                <select id="r-guests" name="guests" required>
+                  <option value="" disabled selected>Nb.</option>
+                  <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option>
+                </select>
+                <span class="field__error" data-for="r-guests"></span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="r-msg">Message <span class="field__opt">(facultatif)</span></label>
+              <textarea id="r-msg" name="message" rows="3" placeholder="Allergies, occasion, demande particulière..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--block">
+              Envoyer la demande
+              <span class="btn__icon" aria-hidden="true"><i class="ph-light ph-arrow-up-right"></i></span>
+            </button>
+            <p class="form-success" id="formSuccess" hidden>
+              <i class="ph-light ph-check-circle" aria-hidden="true"></i>
+              Merci, votre demande est bien partie. Nous vous recontactons très vite pour confirmer.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a class="brand brand--footer" href="#accueil" aria-label="Hanami, accueil">
+          <span class="brand__mark" aria-hidden="true">花</span>
+          <span class="brand__name">Hanami</span>
+        </a>
+        <p>Cuisine japonaise de quartier. Ramen, sushi et izakaya, à Paris depuis 2016.</p>
+        <div class="footer__social">
+          <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener"><i class="ph-light ph-instagram-logo"></i></a>
+          <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener"><i class="ph-light ph-facebook-logo"></i></a>
+          <a href="https://maps.google.com" aria-label="Google Maps" target="_blank" rel="noopener"><i class="ph-light ph-map-pin"></i></a>
+        </div>
+      </div>
+
+      <nav class="footer__nav" aria-label="Liens de pied de page">
+        <h4>Explorer</h4>
+        <a href="#restaurant">Le restaurant</a>
+        <a href="#menu">La carte</a>
+        <a href="#specialites">Spécialités</a>
+        <a href="#galerie">Galerie</a>
+      </nav>
+
+      <div class="footer__col">
+        <h4>Nous trouver</h4>
+        <p>14 rue de la Roquette<br />75011 Paris</p>
+        <p><a href="tel:+33148073962">01 48 07 39 62</a><br /><a href="mailto:bonjour@hanami-paris.fr">bonjour@hanami-paris.fr</a></p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Horaires</h4>
+        <p>Mardi au vendredi<br />12h - 14h30 &nbsp;·&nbsp; 19h - 22h30</p>
+        <p>Samedi 19h - 23h<br />Dimanche 12h - 15h</p>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <p>© <span id="year">2026</span> Hanami. Tous droits réservés.</p>
+      <p>Fait avec soin à Paris.</p>
+    </div>
+  </footer>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Galerie agrandie">
+    <button class="lightbox__close" id="lbClose" aria-label="Fermer"><i class="ph-light ph-x"></i></button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Image précédente"><i class="ph-light ph-caret-left"></i></button>
+    <figure class="lightbox__figure">
+      <img id="lbImg" src="" alt="" />
+    </figure>
+    <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Image suivante"><i class="ph-light ph-caret-right"></i></button>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
