@@ -254,6 +254,12 @@ p { text-wrap: pretty; }
 .nav[data-state="top"] .nav__links a { color: rgba(246,240,230,0.92); }
 .nav[data-state="top"] .nav__toggle span { background: var(--on-dark); }
 
+/* Menu mobile ouvert : le fond du menu est clair, donc la marque et l'icône
+   restent toujours en sombre, quel que soit l'état de défilement du héros.
+   (Sélecteurs assez spécifiques pour l'emporter sur les règles [data-state].) */
+body.menu-open .nav .brand__name { color: var(--ink); }
+body.menu-open .nav .nav__toggle span { background: var(--ink); }
+
 .nav__links {
   display: flex;
   gap: clamp(1rem, 2.4vw, 2.1rem);
@@ -776,7 +782,9 @@ body.menu-open .mobile-menu__foot { opacity: 1; transform: translateY(0); transi
   padding: clamp(1.6rem, 3vw, 2.4rem);
   box-shadow: var(--shadow-md);
 }
-.field { display: flex; flex-direction: column; gap: 0.45rem; margin-bottom: 1.1rem; }
+/* min-width:0 permet aux champs (notamment input[type=date], dont la largeur
+   intrinsèque est grande) de rétrécir dans la grille au lieu de déborder. */
+.field { display: flex; flex-direction: column; gap: 0.45rem; margin-bottom: 1.1rem; min-width: 0; }
 .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .field-row .field--narrow { grid-column: auto; }
 .field label { font-size: 0.85rem; font-weight: 500; color: var(--ink-soft); }
@@ -791,7 +799,13 @@ body.menu-open .mobile-menu__foot { opacity: 1; transform: translateY(0); transi
   padding: 0.8rem 0.9rem;
   transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
   width: 100%;
+  min-width: 0;
+  max-width: 100%;
 }
+/* iOS/WebKit donnent une largeur intrinsèque aux champs date/heure : on les
+   normalise pour qu'ils se comportent comme les autres champs. */
+.field input[type="date"],
+.field input[type="time"] { -webkit-appearance: none; appearance: none; }
 .field textarea { resize: vertical; min-height: 80px; }
 .field input::placeholder, .field textarea::placeholder { color: #9a9389; }
 .field input:focus, .field select:focus, .field textarea:focus {
